@@ -1,1 +1,4 @@
-SSC CGL Planner PWA v4 - GitHub Pages /ssc_schedual/
+SSC CGL Planner PWA v5
+Fixed JavaScript syntax error in install handler.
+Made manifest, favicon, service-worker and icon references relative for GitHub Pages subpaths.
+No icons folder; all icon files are in repository root.
