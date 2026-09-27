@@ -1,27 +1,28 @@
-# SSC CGL Study Planner — GitHub Pages PWA (Install Fixed v3)
+# SSC CGL Study Planner — GitHub Pages PWA v4
 
-## GitHub upload
-Upload every file directly into the repository root. Do not put the files inside an extra folder.
+This build is specifically configured for the repository:
+`https://ajaypaw.github.io/ssc_schedual/`
 
-Required root files:
+## Repository root
+Upload these files directly to the repository root. Do not create an `icons` folder.
+
 - index.html
 - manifest.json
 - sw.js
+- icon.svg
 - icon-192.png
 - icon-512.png
 - icon-maskable-192.png
 - icon-maskable-512.png
-- icon.svg
 - .nojekyll
 
-Then enable GitHub Pages from **Settings → Pages → Deploy from a branch → main → /(root)**.
+## GitHub Pages
+Use **Settings → Pages → Deploy from a branch → main → /(root)**.
 
-## Android Chrome install
-Use the published **HTTPS GitHub Pages URL** in normal Chrome (not Incognito). Open the page fully, then use **⋮ → Install app**. On some current Chrome builds the menu label is **Install and create shortcut**.
+## Android Chrome
+Open the published HTTPS URL in Chrome while online. Refresh once after deployment so the new manifest/service worker are loaded. Then use **⋮ → Install and create shortcut → Install**.
 
-If the install entry is missing, first reload the page once while online and revisit the URL. The app needs its manifest and service worker to be reachable from the same HTTPS origin.
-
-The manifest uses root-relative-to-site paths so it works on a repository Pages URL such as `https://username.github.io/ssc-cgl-planner/`.
+The manifest, scope, start URL, icon URLs and service-worker scope are all tied to `/ssc_schedual/` so they work correctly on this repository Pages site.
 
 ## Offline
-After the app loads successfully online once, the service worker caches the app shell. Planner data remains on the device in LocalStorage; use Data & settings → Export backup.
+After the app shell has loaded online, the service worker caches the planner shell. Your planner data is stored locally on the device; use Data & settings → Export backup for backups.
