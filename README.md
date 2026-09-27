@@ -22,3 +22,6 @@ The service worker caches the app shell. After the planner has been opened once 
 ## Updating the app
 
 After changing `index.html`, increase the version in `sw.js` (for example `ssc-cgl-planner-v2`) before publishing so installed clients refresh their cached app shell.
+
+
+The `icons/` folder includes an SVG app icon (`icon.svg`) plus PNG fallback/maskable icons for broad Chrome/PWA compatibility.
