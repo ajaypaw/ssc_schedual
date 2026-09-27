@@ -2,7 +2,7 @@
   "id": "./",
   "name": "SSC CGL Study Planner",
   "short_name": "SSC CGL Planner",
-  "description": "SSC CGL study planner with calendar, tasks, revision, analytics and focus timer.",
+  "description": "SSC CGL study planner with semester-exam mode, calendar, tasks, spaced revision, analytics and focus timer.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -10,12 +10,36 @@
   "theme_color": "#0b1220",
   "lang": "en-IN",
   "dir": "ltr",
-  "categories": ["education", "productivity"],
+  "categories": [
+    "education",
+    "productivity"
+  ],
   "prefer_related_applications": false,
   "icons": [
-    {"src":"./icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
-    {"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
-    {"src":"./icon-maskable-192.png","sizes":"192x192","type":"image/png","purpose":"maskable"},
-    {"src":"./icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
-  ]
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "orientation": "portrait-primary"
 }

@@ -1,10 +1,17 @@
-# SSC CGL Study Planner — GitHub Pages PWA v4
+# SSC CGL Study Planner — GitHub Pages PWA v6
 
-This build is specifically configured for the repository:
-`https://ajaypaw.github.io/ssc_schedual/`
+This build keeps the existing SSC planner and adds a semester-exam-aware schedule.
+
+## Semester exam window
+**5 November 2026 → 12 December 2026**
+
+During this period the planner switches to light SSC maintenance only. No new SSC syllabus is scheduled. College semester preparation is treated as the priority.
+
+## Adjusted SSC Maths schedule
+The original plan has 220 Maths video units. They remain at **2 active-learning units per normal weekday**, but exam-period weekdays are frozen. This moves the 220-unit learning completion date to **6 April 2027**. Final revision is scheduled from **7 April → 25 April 2027**.
 
 ## Repository root
-Upload these files directly to the repository root. Do not create an `icons` folder.
+Upload these files directly to the repository root. Do not create an icons folder.
 
 - index.html
 - manifest.json
@@ -20,9 +27,7 @@ Upload these files directly to the repository root. Do not create an `icons` fol
 Use **Settings → Pages → Deploy from a branch → main → /(root)**.
 
 ## Android Chrome
-Open the published HTTPS URL in Chrome while online. Refresh once after deployment so the new manifest/service worker are loaded. Then use **⋮ → Install and create shortcut → Install**.
-
-The manifest, scope, start URL, icon URLs and service-worker scope are all tied to `/ssc_schedual/` so they work correctly on this repository Pages site.
+Open the HTTPS GitHub Pages URL in Chrome while online. After the app shell loads, Chrome can offer the install action.
 
 ## Offline
-After the app shell has loaded online, the service worker caches the planner shell. Your planner data is stored locally on the device; use Data & settings → Export backup for backups.
+The service worker caches the planner shell. Planner progress remains in local storage on the device; use Data & settings → Export backup.
