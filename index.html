@@ -170,7 +170,7 @@ img,svg,video,canvas{max-width:100%}
       <div class="mobile-brand"><div class="logo">A</div><strong>SSC CGL Planner</strong></div>
       <div class="header-actions">
         <button id="quickAdd" class="soft-btn">＋ Task</button>
-        <button id="installBtn" class="soft-btn hidden">Install</button>
+        <button id="installBtn" class="soft-btn hidden">Install</button><span id="installHelp" class="muted" style="display:none;align-self:center;max-width:230px">Chrome: ⋮ → Install app / Install and create shortcut</span>
         <button id="themeBtn" class="icon-btn" title="Theme">☾</button>
       </div>
     </header>
@@ -502,6 +502,7 @@ const topicOptions=[...D.mathTopics.map(x=>x.name),"Trains","Boats & Streams","R
 
 let deferred;window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferred=e;document.getElementById("installBtn").classList.remove("hidden")});document.getElementById("installBtn").onclick=async()=>{if(deferred){deferred.prompt();await deferred.userChoice;deferred=null;document.getElementById("installBtn").classList.add("hidden")}};
 if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+setTimeout(()=>{const h=document.getElementById("installHelp"); if(h && !deferred && !window.matchMedia("(display-mode: standalone)").matches) h.style.display="inline-block";},2500);
 renderAll();
 
 </script>

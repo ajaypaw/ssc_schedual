@@ -1,27 +1,27 @@
-# SSC CGL Study Planner — GitHub Pages PWA
+# SSC CGL Study Planner — GitHub Pages PWA (Install Fixed v3)
 
-This folder is ready to publish as a Progressive Web App (PWA).
+## GitHub upload
+Upload every file directly into the repository root. Do not put the files inside an extra folder.
 
-## Publish on GitHub Pages
+Required root files:
+- index.html
+- manifest.json
+- sw.js
+- icon-192.png
+- icon-512.png
+- icon-maskable-192.png
+- icon-maskable-512.png
+- icon.svg
+- .nojekyll
 
-1. Create a new GitHub repository, for example `ssc-cgl-planner`.
-2. Upload **all files and folders in this directory**, keeping all files together in the repository root.
-3. In GitHub: **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and `/ (root)`, then Save.
-6. Open the GitHub Pages URL over **HTTPS**.
+Then enable GitHub Pages from **Settings → Pages → Deploy from a branch → main → /(root)**.
 
-## Install from Chrome on Android
+## Android Chrome install
+Use the published **HTTPS GitHub Pages URL** in normal Chrome (not Incognito). Open the page fully, then use **⋮ → Install app**. On some current Chrome builds the menu label is **Install and create shortcut**.
 
-Open the GitHub Pages URL in Chrome. Chrome may show **Install app** in the browser menu or the planner's **Install** button. Choose Install/Add to Home screen.
+If the install entry is missing, first reload the page once while online and revisit the URL. The app needs its manifest and service worker to be reachable from the same HTTPS origin.
 
-## Offline behavior
+The manifest uses root-relative-to-site paths so it works on a repository Pages URL such as `https://username.github.io/ssc-cgl-planner/`.
 
-The service worker caches the app shell. After the planner has been opened once successfully, the planner can load without an internet connection. User progress is stored locally in the browser via LocalStorage; use **Data & settings → Export backup** periodically for a portable backup.
-
-## Updating the app
-
-After changing `index.html`, increase the version in `sw.js` (for example `ssc-cgl-planner-v2`) before publishing so installed clients refresh their cached app shell.
-
-
-The root directory includes an SVG app icon (`icon.svg`) plus PNG fallback/maskable icons for broad Chrome/PWA compatibility.
+## Offline
+After the app loads successfully online once, the service worker caches the app shell. Planner data remains on the device in LocalStorage; use Data & settings → Export backup.

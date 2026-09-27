@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ssc-cgl-planner-v2';
+const CACHE_NAME = 'ssc-cgl-planner-v3';
 const APP_SHELL = [
   './',
   './index.html',
